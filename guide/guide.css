@@ -1,0 +1,936 @@
+@charset "UTF-8";
+
+*{margin:0; padding:0;}
+a {text-decoration: none; color: #000;}
+ul {list-style: none;}
+img {border: 0; vertical-align: top;}
+.clearFix:after{content:""; display: block; clear:both;}
+/*여기까지 reset css*/
+
+
+
+/*font*/
+
+@font-face {
+    font-family: 'EsaManru300';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EsaManru500';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EsaManru700';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@font-face {
+    font-family: 'Pretendard100';
+    font-weight: 100;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard200';
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard300';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard400';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard500';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard600';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard700';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard800';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard900';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+
+/*header*/
+
+#header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    transition: all 0.5s;
+    /* background-color: white; */
+    box-shadow:0;
+}
+#header.on77{
+    box-shadow:0 1px 10px rgba(0, 0, 0, 0.05);
+}
+
+#header:hover .gnb>li>a{
+    color:#222;
+}
+body,html{
+    display: block;
+    cursor:url(img/head_normal_block.png)-10 -20,auto;
+}
+
+#header .gnb>li a, #header .gnb>li .sub>li>a{
+    display: block;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+
+#header .gnb>li:nth-child(1):hover,
+#header .gnb>li:nth-child(1):hover .sub1{
+    background-color: #54AFFF;
+}
+#header .gnb>li:nth-child(2):hover,
+#header .gnb>li:nth-child(2):hover .sub2{
+    background-color: #F1383E;
+}
+#header .gnb>li:nth-child(3):hover,
+#header .gnb>li:nth-child(3):hover .sub3{
+    background-color: #FAC800;
+}
+#header .gnb>li:nth-child(4):hover,
+#header .gnb>li:nth-child(4):hover .sub4{
+    background-color: #95CA46;
+}
+
+#header .gnb li:nth-child(1):hover .sub1>li>a,
+#header .gnb li:nth-child(2):hover .sub2>li>a,
+#header .gnb li:nth-child(3):hover .sub3>li>a,
+#header .gnb li:nth-child(4):hover .sub4>li>a{
+    color:white;
+}
+
+
+#header .gnb>li:nth-child(1) .sub1>li:hover>a{
+    color:#11548f;
+    background-color: #a5ccee;
+    font-weight: bold;
+}
+#header .gnb>li:nth-child(2) .sub2>li:hover>a{
+    color:#971e22;
+    background-color: #df7c7f;
+    font-weight: bold;
+}
+#header .gnb>li:nth-child(3) .sub3>li:hover>a{
+    color:#a0820b;
+    background-color: #ecdfac;
+    font-weight: bold;
+}
+#header .gnb>li:nth-child(4) .sub4>li:hover>a{
+    color:#55791f;
+    background-color: #cbe7a0;
+    font-weight: bold;
+}
+
+#header .logo {
+    text-indent: -329572959px;
+    width: 219px;
+    height: 80px;
+    background-image: url(img/1704351927330.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#header .logo a{
+    display: block;
+    width: 219px; height: 80px;
+}
+#header .gnb {
+    width: 660px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 960px;
+}
+
+#header .gnb>li {
+    float: left;
+    width: 150px;
+    height:100px;
+    text-align: center;
+    font-style: normal;
+    line-height: 80px;
+    position: relative;
+    padding-top:23px;
+}
+
+#header .gnb>li>a {
+    font-family: 'EsaManru300';
+    font-size: 23px;
+    font-weight: 300;
+    color:white;
+
+}
+
+#header .gnb>li .sub {
+    width: 150px;
+    height:300px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+}
+#header .gnb>li .sub>li{
+    line-height: 43px;
+}
+#header .gnb>li .sub>li>a{
+    color: #555;
+    font-size: 1.2em;
+    font-family: 'Pretendard300';
+    letter-spacing: -0.04em;
+
+}
+#header .reservation {
+    width: 130px;
+    height: 70px;
+    background-color: rgb(232, 27, 35);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 190px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+
+}
+
+#header .reservation>a {
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    font-family: 'EsaManru300';
+    font-weight: 300;
+    font-size: 20px;
+    text-shadow: 0 0 5px rgb(115, 5, 9);
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+
+/*section*/
+
+#section .top_tit{
+    width:100%;
+    height:500px;
+    background-color: #2ca2fd;
+    position:relative;
+    top:0px;
+    left:0;
+    z-index: 0;
+}
+
+#section .top_tit .left_tit{
+    position:absolute;
+    top:145px;
+    left:228px;
+}
+
+#section .top_tit .left_tit .follow{
+    margin-bottom:27px;
+}
+#section .top_tit .left_tit .follow img{
+    float:left;
+    margin-right:5px;
+    width:20px; height:20px;
+}
+#section .top_tit .left_tit .follow p{
+    font-family: 'Pretendard500';
+    float:left;
+    font-size:16px;
+    color:white;
+}
+
+#section .top_tit .left_tit>h1{
+    font-family: 'EsaManru300';
+    font-size:50px;
+    color:white;
+    text-align: left;
+}
+
+#section .top_tit .tit_img{
+    width:373px;
+    height:390px;
+    background-image: url(img/images/03.png);
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+    position:absolute;
+    top:110px;
+    right:243px;
+}
+
+#section .tab_menu{
+    position:absolute;
+    top:430px;
+    left:50%; margin-left:-400px;
+}
+#section .tab_menu>div{
+    float:left;
+    width: 176.5px; text-align: center;
+    height:70px; line-height:70px;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+    font-family: 'Pretendard600';
+}
+#section .tab_menu>div.on{
+    background-color:white;
+    color:#333;
+}
+
+#section .con_all{
+    position:relative;
+    height:auto;
+    /* background-color: pink; */
+}
+/*con1*/
+#section .con_all .con{
+    position:absolute;
+    width:1000px;
+    top:150px; left:50%;
+    margin-left:-500px;
+    display: none;
+    position: relative;
+    animation:0.5s ease delays;
+    transition: all 0.3s;
+}
+
+@keyframes delays {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+
+#section div.on, #section .con_all .con_1{display: block;}
+#section .con_tit{
+    text-align:center;
+    font-size:38px;
+    color:#333;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    font-family: 'EsaManru300';
+}
+
+#section .map{
+    width:1000px; margin:40px auto;
+    height:600px;
+    border-radius: 10px;
+    overflow: hidden;
+    position:relative;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+
+#section .map iframe{
+    position:absolute;
+    top:0; left:0;
+}
+    @media screen and (max-width: 1074px){
+        .map iframe{
+           width: 300px;
+           height:300px;
+      }
+  }
+  /*@media screen and (max-width: 1074px)는 1074px보다 작아지면 아래를 
+  실행. 반응형 웹 만들 때 유용함!*/
+
+#section .map .adrs{
+    width: 400px; height: 40px;
+    background-image: url(img/images/11.gif);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    position:absolute;
+    bottom:0; right:0;
+}
+#section .con1_tit, #section .con2_tit{
+    width:180px; text-align:center;
+    height:60px; line-height:60px;
+    background-color:#222;
+    color:white;
+    font-size:25px; font-weight:bold;
+    margin-bottom:80px;
+    margin-top:150px;
+    font-family: 'Pretendard600';
+}
+#section .con1_inner_txt .subway, #section .con2_inner_txt .subway{
+    position:relative;
+    height:1000px;
+    top: 0;
+    left:0;
+}
+#section .con1_inner_txt .subway .subway_line{
+    border:1px solid gray;
+    border-radius: 5px;
+    width:1000px;
+    height:400px;
+    padding:50px;
+    margin-left:-550px;
+    position:absolute;
+    top:50px; left:50%;
+}
+#section .con2_inner_txt .subway .subway_line{
+    border:1px solid gray;
+    border-radius: 5px;
+    width:1000px;
+    height:150px;
+    padding:50px;
+    margin-left:-550px;
+    position:absolute;
+    top:50px; left:50%;
+}
+
+#section .con1_inner_txt .subway .subway_line .tit_box,
+#section .con2_inner_txt .subway .subway_line .tit_box{
+    /* margin-left:297px; */
+    margin-bottom:85px;
+    position:absolute;
+    top:-80px; left:20px;
+    background-color:white;
+    padding-top:20px;
+    padding-right:20px;
+}
+#section .con1_inner_txt .subway .subway_line .tit_box .subway_img,
+#section .con2_inner_txt .subway .subway_line .tit_box .subway_img{
+    width: 100px;
+    height: 100px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    float:left;
+    margin-top:15px;
+}
+#section .con1_inner_txt .subway .subway_line .tit_box .subway_img{
+    background-image: url(img/subway.png);
+}
+#section .con2_inner_txt .subway .subway_line .tit_box .subway_img{
+    background-image: url(img/istockphoto-1013536510-2048x2048.png);
+}
+
+
+#section .con1_inner_txt .subway .subway_line .tit_box>h1,#section .con2_inner_txt .subway .subway_line .tit_box>h1{
+    float:left;
+    font-size:25px;
+    margin-top:40px;
+    font-family: 'Pretendard800';
+}
+#section .con_1 .con1_inner_txt .subway .subway_line>p{
+    color:#222;
+    position:absolute;
+    top:20%; left:5%;
+    font-size:18px;
+    line-height:30px;
+    font-family: 'Pretendard600';
+}
+#section .con_2 .con2_inner_txt .subway .subway_line>p{
+    /* margin-left:340px; */
+    color:#222;
+    position:absolute;
+    top:35%; left:5%;
+    font-size:18px;
+    line-height:30px;
+    font-family: 'Pretendard600';
+}
+
+/*bus*/
+
+#section .con_1 .con1_inner_txt .bus, #section .con_2 .con2_inner_txt .bus{
+    position:relative;
+    height:800px;
+    top: -300px;
+    left:0;
+}
+#section .con_1 .con1_inner_txt .bus_line{
+    border:1px solid gray;
+    border-radius: 5px;
+    width:1000px;
+    height:400px;
+    padding:50px;
+    margin-left:-550px;
+    position:absolute;
+    top:0; left:50%;
+}
+#section .con_2 .con2_inner_txt .bus_line{
+    border:1px solid gray;
+    border-radius: 5px;
+    width:1000px;
+    height:400px;
+    padding:50px;
+    margin-left:-550px;
+    position:absolute;
+    top:-200px; left:50%;
+}
+
+#section .con_1 .con1_inner_txt .bus_line .tit_box {
+    margin-bottom:85px;
+    position:absolute;
+    top:-80px; left:20px;
+    background-color:white;
+    padding-top:20px;
+    padding-right:30px;
+}
+#section .con_2 .con2_inner_txt .bus_line .tit_box{
+    margin-bottom:85px;
+    position:absolute;
+    top:-80px; left:30px;
+    background-color:white;
+    padding:20px;
+    width:320px;
+}
+#section .con_1 .con1_inner_txt .bus_line .tit_box .bus_img{
+    width: 100px;
+    height: 100px;
+    background-image: url(img/istockphoto-1223994829-2048x2048.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-top:17px;
+    float:left;
+}
+#section .con_2 .con2_inner_txt .bus_line .tit_box .bus_img{
+    width:70px; 
+    height:70px;
+    background-image: url(img/istockphoto-1202460462-2048x2048.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right:10px;
+    margin-top:20px;
+    float:left;
+}
+#section .con_1 .con1_inner_txt .bus_line .tit_box h1, #section .con_2 .con2_inner_txt .bus_line .tit_box h1{
+    float:left;
+    font-size:25px;
+    margin-top:40px;
+    font-family: 'Pretendard800';
+}
+#section .con_1 .con1_inner_txt .bus_line p, #section .con_2 .con2_inner_txt .bus_line p{
+    /* margin-left:340px; */
+    font-size:18px;
+    line-height:30px;
+    color:#222;
+    position:absolute;
+    top:20%; left:5%;
+    font-family: 'Pretendard600';
+}
+
+/*con3 css*/
+#section .con_3 .con_tit{
+    text-align: center;
+}
+#section .con_3 .con3_tit,
+#section .con_4 .con3_tit{
+    height:50px; line-height:50px;
+    margin-top:100px; text-align: center;
+    font-size:30px;
+    font-family: 'Pretendard700';
+    background-color:#2ca2fd;
+    color:white;
+}
+
+#section .con_3_1_left{
+    margin-top:50px;
+}
+
+#section .con_3 .con_3_1{
+    float: left;
+    margin-left:30px;
+}
+#section .con_3 .con_3_1 .con_3_1_tit{
+    font-size: 20px;
+    margin-top:70px; margin-bottom:50px;
+    font-family: 'EsaManru300';
+}
+#section .con_3 .con_3_1 .con_3_1_p{
+    font-family: 'Pretendard500';
+    margin-bottom:50px;
+    font-size:17px;
+}
+#section .con_3 .con_3_1 .time{
+    font-family: 'Pretendard400';
+    line-height:25px;
+    font-size:17px;
+    letter-spacing: -1px;
+}
+#section .con_3 .time_map {
+    float:left;
+    margin:50px 0 0 20px;
+}
+
+
+#section .con_3 .con_3_2{
+    margin-top:150px;
+    margin-left:80px;
+    /* background-color: pink; */
+}
+#section .con_3 .con_3_2>h3{
+    font-family: 'EsaManru300';
+    margin-bottom:30px;
+    font-size:20px;
+}
+#section .con_3 .con_3_2>h4{
+    font-family: 'Pretendard400';
+    margin-bottom:20px;
+    font-size:18px;
+}
+#section .con_3 .con_3_2 .con_3_2_p1{
+    font-family: 'Pretendard300';
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+#section .con_3 .con_3_2 .time1_left,
+#section .con_3 .con_3_2 .time2_left{
+    position:relative;
+    /* left:23%; */
+    float:left;
+}
+#section .con_3 .con_3_2 .time2_left{
+    margin-left:40px;
+}
+#section .con_3 .con_3_2 .time1_left .time1,
+#section .con_3 .con_3_2 .time2_left .time2{
+    float:left;
+    width: 240px;
+    background-color: #FAC800;
+    padding-top:45px;
+    padding-left:10px;
+    padding-right:10px;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+    font-size:15px;
+    text-align: center;
+    color: rgb(110, 110, 110);
+    font-family: 'Pretendard400';
+    line-height:28px;
+    height:370px;
+}
+#section .con_3 .con_3_2 .time1_left .time1 span,
+#section .con_3 .con_3_2 .time2_left .time2 span{
+    color:#2ca2fd;
+    font-size:16px;
+    font-family: 'Pretendard600';
+}
+#section .con_3 .con_3_2 .time1_left img,
+#section .con_3 .con_3_2 .time2_left img{
+    float:left;
+    height:370px;
+    border-radius: 0 10px 10px 0;
+}
+
+#section .con_3 .con_3_2 .number{
+    margin-top:100px;
+    font-family: 'Pretendard300';
+    font-size:15px;
+    text-align:center;
+    height:600px;
+}
+
+
+
+/*con4 css*/
+#section .con_4{height:1000px;}
+#section .con_4 .con_tit{}
+#section .con_4 .con_4_box{
+    border: 1px solid #2ca2fd;
+    padding:50px;
+    padding-left:320px;
+
+}
+#section .con_4 h3{
+    /* margin-top:50px; */
+    color:#555;
+}
+#section .con_4 p{
+    margin-top:10px;
+    font-family: 'Pretendard300';
+}
+
+
+
+
+
+/*footer*/
+.wrap{
+    position: relative;
+}
+
+#footer{
+    width: 100%;
+    height: 430px;
+    /* margin-top: 100px; */
+    background-color: #262626;
+    position:absolute;
+    bottom:-160px;
+    /* position: relative; */
+    /* top:2400px; */
+}
+#footer .linsafj{
+    width: 100%;
+    height: 300px;
+    color: rgb(123,123,123);
+    font-family: 'Pretendard300';
+    border-bottom: 1px solid white;
+}
+#footer .linsafj .fotterTop{
+    width: 80%;
+    margin: 0px auto ;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+#footer .linsafj .fotterTop>li{
+    font-size: 20px;
+    font-family: 'Pretendard500';
+    color: #bdbbbb;
+}
+#footer .linsafj .fotterTop>li>ul{
+    margin-top: 20px;
+}
+#footer .linsafj .fotterTop>li>ul>li{
+    font-size: 15px;
+    color: rgb(123,123,123);
+    line-height: 30px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#footer .linsafj .fotterTop>li .sns{
+    margin-top:8px;
+}
+#footer .linsafj .fotterTop>li .sns>li{
+    display: inline-block;
+    margin-top: 0px;
+    margin-right: 5px;
+}
+#footer .linsafj .fotterTop>li>ul>li.expend{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(123,123,123);
+    color: #bdbbbb;
+    position: relative;
+    z-index: 10;
+}
+#footer .linsafj .fotterTop>li>ul>li.expend>span{
+    font-size:30px;
+    position: absolute;
+    top:10px;
+    right: 20px;
+}
+#footer .linsafj .fotterTop>li>ul>li .another{
+    font-size: 15px;
+    color: rgb(123, 123, 123);
+    background-color: #bdbbbb;
+    line-height: 40px;
+    position:absolute;
+    top:45px; left: 0;
+    width: 250px;
+    z-index: -10;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    height: 140px;
+    overflow-y: hidden;
+}
+
+
+/* #footer .linsafj .fotterTop>li>ul>li .upDown{
+    height:140px;
+    border-radius: 0 0 20px 20px;
+    overflow-y: auto; */
+    /* display: block; */
+/* } */
+#footer .fotterTop>li>ul.country>li>ul.another::-webkit-scrollbar{
+    width:10px;
+}
+
+
+#footer .fotterTop>li>ul.country>li>ul.another::-webkit-scrollbar-thumb{ /*막대*/
+    background-color: rgb(123, 123, 123);
+    border-radius: 50px;
+}
+
+#footer .fotterTop>li>ul.country>li>ul.another:hover{
+    overflow-y: scroll;
+    text-indent: 10px;
+}
+
+#footer .fotterTop>li>ul.country>li>ul.another>li:hover{
+    background-color: #555;
+}
+
+
+
+
+#footer .fotterBtm{
+    width: 1250px;
+    margin: 30px auto 0;
+    padding-bottom: 20px;
+}
+#footer .fotterBtm .fotterlogo{
+    width: 250px;
+    height: 80px;
+    float: left;
+    text-indent: -329857928357329px;
+    background-image: url(img/images/footerlogo_03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left:8%;
+}
+#footer .fotterBtm p{
+    font-family: 'Pretendard300';
+    font-size: 13px;
+    color: rgb(191,191,191);
+    margin-top: 5px;
+}
+#footer .fotterBtm p.add{
+margin-left: 30px;
+}
+#footer .fotterBtm p.num{
+margin-left: 30px;
+margin-bottom: 10px;
+}
+#footer .fotterBtm p.byebye{
+font-size: 13px;
+color: rgb(105,105,105);
+}
+
+.material-symbols-outlined{
+    animation-duration: 0.5s;
+    animation-name: footer ;
+    animation-iteration-count: infinite;
+}
+
+@keyframes footer {
+    0% {
+    transform:scale(1.0);
+    }
+    50% {
+    transform: scale(1.3);
+    color: rgb(85, 85, 85);
+    }
+    100% {
+    transform: scale(1.0);
+    }
+}
+
+#section .top_tit .tit_img{
+    animation-duration: 4s;
+    animation-name: object ;
+    animation-iteration-count: infinite;
+}
+@keyframes object {
+    0% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(-15px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}

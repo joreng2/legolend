@@ -1,0 +1,403 @@
+@font-face {
+    font-family: 'Pretendard300';
+    font-weight: 300;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard600';
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'EsaManru700';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+#attrac {
+    width: 100%;
+    height: 1370px;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+    /* background-color: aqua; */
+
+}
+
+#attrac .backcolor .backco1 {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#attrac h2 {
+    position: absolute;
+    color: #fff;
+    top: 300px;
+    left: 50%;
+    margin-left: -133px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    font-family: 'EsaManru700';
+    font-size: 70px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+/* 탭메뉴 */
+.tab_wrap {
+    max-width: 100%;
+    margin: 400px auto 0;
+    padding: 0 30px;
+    /* background-color: azure; */
+}
+
+.tab_wrap .tit_list {
+    /* margin-top: 500px; */
+    position: relative;
+    font-size: 0;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.tab_wrap .tit_list:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* height: 1px; */
+    /* background: #ddd; */
+    z-index: 1;
+}
+
+.tab_wrap .tit_list>li {
+    display: inline-block;
+    margin-right: 80px;
+    vertical-align: top;
+}
+
+.tab_wrap .tit_list>li:last-child {
+    margin-right: 0px;
+}
+
+.tab_wrap .tit_list>li a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Pretendard600';
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+.tab_wrap .tit_list>li.active a {
+    position: relative;
+    color: #060606;
+    z-index: 2;
+}
+
+.tab_wrap .tab_con {
+    /* border: 1px solid #ddd; */
+    border-top: none;
+}
+
+.tab_wrap .tab_con .tab_list {
+    display: none;
+    padding: 15px;
+}
+
+/* 슬라이드 */
+.slider {
+    /* font-size: 0; */
+    text-align: center;
+    background-color: #ced4dd;
+    z-index: 10;
+}
+
+
+
+
+.slide_list>li.topia1 {
+    background-image: url(images/brick1.webp);
+}
+
+.slide_list>li.topia2 {
+    background-image: url(images/brick2.webp);
+}
+
+.slide_list>li.topia3 {
+    background-image: url(images/brick3.webp);
+}
+
+.slide_list>li.topia4 {
+    background-image: url(images/brick4.webp);
+}
+
+.slide_list>li.topia5 {
+    background-image: url(images/brick5.webp);
+}
+
+.slide_list>li.topia6 {
+    background-image: url(images/street1.webp);
+}
+
+.slide_list>li.topia7 {
+    background-image: url(images/lego137238.webp);
+}
+
+.slide_list>li.castle1 {
+    background-image: url(images/castle1.webp);
+}
+
+.slide_list>li.castle2 {
+    background-image: url(images/castle2.webp);
+}
+
+.slide_list>li.castle3 {
+    background-image: url(images/castle3.webp);
+}
+
+.slide_list>li.castle4 {
+    background-image: url(images/castle4.webp);
+}
+
+.slide_list>li.castle5 {
+    background-image: url(images/castle5.webp);
+}
+
+.slide_list>li.castle6 {
+    background-image: url(images/city1.webp);
+}
+
+.slide_list>li.castle7 {
+    background-image: url(images/city2.webp);
+}
+
+.slide_list>li.ninja1 {
+    background-image: url(images/ninja1.webp);
+}
+
+.slide_list>li.ninja2 {
+    background-image: url(images/nin2.webp);
+}
+
+.slide_list>li.ninja3 {
+    background-image: url(images/nin3.webp);
+}
+
+.slide_list>li.ninja4 {
+    background-image: url(images/nin4.webp);
+}
+
+.slide_list>li.ninja5 {
+    background-image: url(images/nin5.webp);
+}
+
+.slide_list>li.ninja6 {
+    background-image: url(images/nin6.webp);
+}
+
+.slide_list>li.ninja7 {
+    background-image: url(images/nin7.webp);
+}
+
+.slide_list>li.pirate1 {
+    background-image: url(images/pira1.webp);
+}
+
+.slide_list>li.pirate2 {
+    background-image: url(images/pira2.webp);
+}
+
+.slide_list>li.pirate3 {
+    background-image: url(images/pira3.webp);
+}
+
+.slide_list>li.pirate4 {
+    background-image: url(images/pira4.webp);
+}
+
+.slide_list>li.pirate5 {
+    background-image: url(images/pira5.webp);
+}
+
+.slide_list>li.pirate6 {
+    background-image: url(images/city2.webp);
+}
+
+.slide_list>li.pirate7 {
+    background-image: url(images/city3.webp);
+}
+
+.slide_list>li.mini1 {
+    background-image: url(images/mini1.webp);
+}
+
+.slide_list>li.mini2 {
+    background-image: url(images/mini2.webp);
+}
+
+.slide_list>li.mini3 {
+    background-image: url(images/mini3.webp);
+}
+
+.slide_list>li.mini4 {
+    background-image: url(images/mini4.webp);
+}
+
+.slide_list>li.mini5 {
+    background-image: url(images/mini5.webp);
+}
+
+.slide_list>li.mini6 {
+    background-image: url(images/mini6.webp);
+}
+
+.slide_list>li.mini7 {
+    background-image: url(images/mini7.webp);
+}
+
+
+
+
+
+/* 슬라이드 CSS */
+
+.slider {
+    max-width: 99%;
+    margin: 0px auto 0;
+    padding: 60px 15px;
+    font-size: 0;
+    text-align: center;
+    background-color: transparent;
+}
+
+.slider .inner {
+    overflow: hidden;
+    width: 90%;
+    margin: -50px auto 0;
+    padding: 135px 0;
+}
+
+.slide_list>li {
+    position: relative;
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    font-size: 20px;
+    line-height: 150px;
+    /* color: #000; */
+    text-align: center;
+    z-index: 0;
+    background-size: 98%;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+/* 영역별 크기 설정 */
+.slide_list>li.swiper-slide-next,
+.slide_list>li.swiper-slide-prev,
+.slide_list>li.swiper-slide-duplicate-next,
+.slide_list>li.swiper-slide-duplicate-prev {
+    z-index: 50;
+    transform: scale(1.5);
+    /* margin: 0 60px; */
+}
+
+.slide_list>li.swiper-slide-active,
+.slide_list>li.swiper-slide-duplicate-active {
+    z-index: 100;
+    transform: scale(2);
+}
+
+/* 영역별 밝기 설정 */
+.slide_list>li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s;
+    opacity: 1;
+
+}
+
+.slide_list>li.swiper-slide-next:after,
+.slide_list>li.swiper-slide-prev:after,
+.slide_list>li.swiper-slide-duplicate-next:after,
+.slide_list>li.swiper-slide-duplicate-prev:after {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.slide_list>li.swiper-slide-active:after,
+.slide_list>li.swiper-slide-duplicate-active:after {
+    opacity: 0;
+}
+
+/*화살표 */
+.slider .btn {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 30px 15px 0;
+    background: url('images/arrow_main.png') center center no-repeat;
+    background-size: cover;
+    text-indent: -999em;
+    cursor: url(images/yell_block.png)-10 -20,auto;
+}
+
+.slider .btn.btn_prev {
+    transform: rotateY(0deg);
+}
+
+.slider .btn.btn_next {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 768px) {
+    .slider .inner {
+        padding: 38px 0;
+    }
+
+    .slide_list>li {
+        width: 33.333%;
+    }
+
+    .slide_list>li.swiper-slide-next,
+    .slide_list>li.swiper-slide-prev,
+    .slide_list>li.swiper-slide-duplicate-next,
+    .slide_list>li.swiper-slide-duplicate-prev {
+        transform: scale(1);
+    }
+
+    .slide_list>li.swiper-slide-active,
+    .slide_list>li.swiper-slide-duplicate-active {
+        transform: scale(1.5);
+    }
+}

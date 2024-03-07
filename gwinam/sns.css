@@ -1,0 +1,983 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000000;}
+.clearFix::after,
+.clearFix::before
+{content: ""; display: block; clear: both;}
+@font-face {
+    font-family: "EsaManru300";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Light.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Light.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Light.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Light.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Light.ttf") format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: "EsaManru500";
+    font-weight: 500;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Medium.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Medium.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Medium.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Medium.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Medium.ttf") format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: "EsaManru700";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Bold.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Bold.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Bold.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Bold.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/esaManru/esaManru-Bold.ttf") format("truetype");
+    font-display: swap;
+} 
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@font-face {
+    font-family: 'Pretendard100';
+    font-weight: 100;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard200';
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard300';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard400';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard500';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard600';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard700';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard800';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard900';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+/*header*/
+
+#header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    transition: all 0.5s;
+    /* background-color: white; */
+    box-shadow:0;
+}
+#header.on77{
+    box-shadow:0 1px 10px rgba(0, 0, 0, 0.05);
+}
+
+#header:hover .gnb>li>a{
+    color:#222;
+}
+
+#header .gnb>li:nth-child(1):hover,
+#header .gnb>li:nth-child(1):hover .sub1{
+    background-color: #54AFFF;
+}
+#header .gnb>li:nth-child(2):hover,
+#header .gnb>li:nth-child(2):hover .sub2{
+    background-color: #F1383E;
+}
+#header .gnb>li:nth-child(3):hover,
+#header .gnb>li:nth-child(3):hover .sub3{
+    background-color: #FAC800;
+}
+#header .gnb>li:nth-child(4):hover,
+#header .gnb>li:nth-child(4):hover .sub4{
+    background-color: #95CA46;
+}
+
+#header .gnb li:nth-child(1):hover .sub1>li>a,
+#header .gnb li:nth-child(2):hover .sub2>li>a,
+#header .gnb li:nth-child(3):hover .sub3>li>a,
+#header .gnb li:nth-child(4):hover .sub4>li>a{
+    color:white;
+}
+#header .gnb>li .sub>li>a{display: block;}
+
+#header .gnb>li:nth-child(1) .sub1>li:hover>a{
+    color:#11548f;
+    background-color: #a5ccee;
+    font-weight: bold;
+}
+#header .gnb>li:nth-child(2) .sub2>li:hover>a{
+    color:#971e22;
+    background-color: #df7c7f;
+    font-weight: bold;
+}
+#header .gnb>li:nth-child(3) .sub3>li:hover>a{
+    color:#a0820b;
+    background-color: #ecdfac;
+    font-weight: bold;
+}
+#header .gnb>li:nth-child(4) .sub4>li:hover>a{
+    color:#55791f;
+    background-color: #cbe7a0;
+    font-weight: bold;
+}
+
+#header .logo {
+    text-indent: -329572959px;
+    width: 219px;
+    height: 80px;
+    background-image: url(img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#header .logo a{
+    display: block;
+    width: 219px; height: 80px;
+}
+#header .gnb {
+    width: 660px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 960px;
+}
+
+#header .gnb>li {
+    float: left;
+    width: 150px;
+    height:100px;
+    text-align: center;
+    font-style: normal;
+    line-height: 80px;
+    position: relative;
+    padding-top:23px;
+}
+
+#header .gnb>li>a {
+    font-family: 'EsaManru300';
+    font-size: 23px;
+    font-weight: 300;
+    color:white;
+
+}
+
+#header .gnb>li .sub {
+    width: 150px;
+    height:300px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+}
+#header .gnb>li .sub>li{
+    line-height: 43px;
+}
+#header .gnb>li .sub>li>a{
+    color: #555;
+    font-size: 1.2em;
+    font-family: 'Pretendard300';
+    letter-spacing: -0.04em;
+
+}
+#header .reservation {
+    width: 130px;
+    height: 70px;
+    background-color: rgb(232, 27, 35);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 190px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+
+}
+
+#header .reservation>a {
+    display: block;
+    width: 130px; height: 70px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    font-family: 'EsaManru300';
+    font-weight: 300;
+    font-size: 20px;
+    text-shadow: 0 0 5px rgb(115, 5, 9);
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+
+body,html{
+    display: block;
+    cursor:url(img/head_normal_block.png)-10 -20,auto;
+}
+
+#header .gnb>li a, #header .gnb>li .sub>li>a{
+    display: block;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+
+
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡ섹션ㅡㅡㅡㅡㅡㅡㅡ */
+
+#section .scroll_wrap {overflow: hidden;}
+#section .scroll_on {padding:50px 0;opacity: 0;transition: all 1s;}
+#section .scroll_on.active {opacity: 1 !important;transform: translate(0, 0) !important;}
+#section .scroll_on.type_top {transform: translate(0, -50px);}
+#section .scroll_on.type_left {transform: translate(-50px, 0);}
+#section .scroll_on.type_right {transform: translate(50px, 0);}
+
+
+
+#section{
+    width: 100%;
+    padding-top:0px;
+    position: relative;
+    z-index: 0;
+}
+
+
+#section .top_tit{
+    width:100%;
+    height:500px;
+    background-color: #F4CA44;
+    position:relative;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+
+#section .top_tit .left_tit{
+    position:absolute;
+    top:145px;
+    left:228px;
+}
+
+#section .top_tit .left_tit .follow{
+    margin-bottom:27px;
+}
+#section .top_tit .left_tit .follow img{
+    float:left;
+    margin-right:5px;
+    width: 20px; height: 20px;
+}
+#section .top_tit .left_tit .follow p{
+    font-family: 'Pretendard500';
+    float:left;
+    font-size:16px;
+    color:white;
+}
+
+#section .top_tit .left_tit>h1{
+    font-family: 'EsaManru300';
+    font-size:50px;
+    color:white;
+    text-align: left;
+}
+
+#section .top_tit .tit_img{
+    width:600px;
+    height:600px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/mini.png);
+    position:absolute;
+    top:-40px;
+    right:203px;
+    z-index: -1;
+}
+
+#section .c_head{
+    padding-top: 90px;
+    width: 100%; height: 130px;
+    color: #333333;
+    text-shadow:3px 3px 3px rgba(0,0,0,0.2);
+    background-color: #fff;
+    line-height: 100px;
+    text-align: center;
+    font-size: 52px;
+    font-family: 'EsaManru300';
+    position: absolute;
+    z-index: 0;
+}
+#section>div>h1{
+    font-family: 'EsaManru300';
+    color: #333333;
+    text-shadow:3px 3px 3px rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 52px;
+    padding-top: 0px;
+    margin-top: -80px;
+    margin-bottom: 60px;
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡ유튜브 및 전체 레이아웃 ㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+#section .top{
+    width: 1528px; height: 443px;
+    margin: 0 auto;
+    position: relative;
+}
+#section .top .video{
+    float: left;
+    width: 755px; height: 430px;
+}
+#section .top .video{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#section .con1 h1{
+    margin-top: 120px;
+}
+#section .con1 .top .video{
+    background-image: url(img/youtube_1.png);
+}
+#section .con2 .top .video{
+    background-image: url(img/instar_1.png);
+    
+}
+#section .con2 .top .video::after{
+    cursor:url(img/yell_block.png)-10 -20,auto;
+    line-height: 400px;
+    color: #fff;
+    font-family: "EsaManru300";
+    text-align: center;
+    content: "♥ 186 　🗨 35";
+    width: 100%; height: 100%;
+    background-color: #00000073;
+    opacity: 0;
+}
+#section .con2 .top .video:hover::after{
+    opacity: 1;
+}
+#section .con3 .top .video{
+    background-image: url(img/blog_1.png);
+    transition: all 0.4s;
+}
+#section .top .text{
+    float: left;
+    margin-left: 25px;
+    color: #333333;
+    font-family: 'Pretendard500';
+}
+#section .top .text h2{
+    font-family: 'EsaManru500';
+    font-size: 40px;
+}
+#section .top .text h4{
+    font-size: 27px;
+    font-weight: 500;
+    margin-top: 60px;
+    line-height: 40px;
+    color: #585858;
+}
+#section .top .text h3{
+    margin-top: 20px;
+    font-size: 27px;
+    line-height: 40px;
+    font-weight: 500;
+    color:#585858;
+}
+#section .top .text .tag{
+    padding-left: 55px;
+    font-size: 25px;
+    position: relative;
+    position: absolute;
+    bottom: 15px;
+    color:#585858;
+}
+#section .top .text .tag::after{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50px; height: 50px;
+    position: absolute;
+    left: 0; top: -15px;
+}
+#section .con1 .tag::after{
+    background-image: url(img/youtube.png);
+}
+#section .con2 .tag::after{
+    background-image: url(img/insta.png);
+}
+#section .con3 .tag::after{
+    width: 43px; height: 43px;
+    background-image: url(img/blog.png);
+}
+#section .con1 .video{
+    width: 745px;
+}
+#section .bottom_box{
+    width: 1526px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+#section .bottom{
+    width: 200%;
+    margin: 0 auto;
+    margin-left: -26%;
+}
+#section .bottom>ul>li{
+    float: left;
+    width: 370px; height: 205px;
+    margin-right: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section .con1 .bottom>ul .p1{
+    background-image: url(img/youtube_2.png);
+}
+#section .con1 .bottom>ul .p2{
+    background-image: url(img/youtube_3.png);
+}
+#section .con1 .bottom>ul .p3{
+    background-image: url(img/youtube_4.png);
+    background-position-x: 20px;
+}
+#section .con1 .bottom>ul .p4{
+    background-image: url(img/youtube_5.png);
+}
+#section .con1 .bottom>ul .p5{
+    background-image: url(img/youtube_6.png);
+}
+#section .con1 .bottom>ul .p6{
+    background-image: url(img/youtube_7.png);
+    background-position-y: -10px;
+}
+#section .btn>div{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;height: 40px;
+    position: absolute;
+    bottom: 120px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#section .next{
+    background-image: url(img/right.png);
+    right: 145px;
+}
+#section .prev{
+    background-image: url(img/left.png);
+    left: 130px;
+}
+
+#section .con1 .bottom>ul>li::after{
+    width: 50px; height: 50px;
+    background-image: url(img/play.png);
+    margin-left: 160px;
+    margin-top: 80px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#section .con1 .video::after{
+    width: 80px; height: 80px;
+    background-image: url(img/play.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 340px;
+    margin-top: 180px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡ인스타ㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+#section .con2{
+    margin-top: 100px;
+}
+#section .con2 .bottom>ul>li{
+    width: 370px; height: 375px;
+}
+#section .con2 .bottom{
+    width: 1528px;
+    margin: 0 auto;
+}
+#section .con2 .bottom>ul>li:nth-child(1){
+    background-image: url(img/instar_2.jpg);
+}
+#section .con2 .bottom>ul>li:nth-child(2){
+    background-image: url(img/instar_3.jpg);
+}
+#section .con2 .bottom>ul>li:nth-child(3){
+    background-image: url(img/instar_4.jpg);
+}
+#section .con2 .bottom>ul>li:nth-child(4){
+    background-image: url(img/instar_5.jpg);
+    margin-right: 0;
+}
+#section .con2 .bottom>ul>li:nth-child(1)::after{
+    content: "♥ 316 　🗨 41";
+}
+#section .con2 .bottom>ul>li:nth-child(2)::after{
+    content: "♥ 106 　🗨 18";
+}
+#section .con2 .bottom>ul>li:nth-child(3)::after{
+    content: "♥ 224 　🗨 80";
+}
+#section .con2 .bottom>ul>li:nth-child(4)::after{
+    content: "♥ 541 　🗨 188";
+}
+#section .con2 .bottom>ul>li::after{
+    cursor:url(img/yell_block.png)-10 -20,auto;
+    line-height: 400px;
+    color: #fff;
+    font-family: "EsaManru300";
+    text-align: center;
+    width: 100%; height: 100%;
+    background-color: #00000073;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#section .con2 .bottom>ul>li:hover::after{
+    opacity: 1;
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ블로그ㅡㅡㅡㅡㅡㅡㅡ */
+
+
+#section .con3{
+    margin-top: 500px;
+}
+#section .con3 .bottom{
+    width: 1528px;
+    margin: 0 auto;
+}
+
+#section .con3 .bottom>ul>li{
+    cursor:url(img/yell_block.png)-10 -20,auto;
+    width: 370px; height: 375px;
+    transition: all 0.4s;
+}
+#section .con3 .video:hover{
+    cursor:url(img/yell_block.png)-10 -20,auto;
+    background-image: url(img/bh1.jpg);
+}
+#section .con3 .bottom>ul>li:nth-child(1){
+    background-image: url(img/blog_2.png);
+}
+#section .con3 .bottom>ul>li:nth-child(2){
+    background-image: url(img/blog_3.png);
+}
+#section .con3 .bottom>ul>li:nth-child(3){
+    background-image: url(img/blog_4.jpg);
+}
+#section .con3 .bottom>ul>li:nth-child(4){
+    background-image: url(img/blog_5.png);
+    margin-right: 0;
+}
+#section .con3 .bottom>ul>li:nth-child(1):hover{
+    background-image: url(img/bh2.jpg);
+}
+#section .con3 .bottom>ul>li:nth-child(2):hover{
+    background-image: url(img/bh3.jpg);
+}
+#section .con3 .bottom>ul>li:nth-child(3):hover{
+    background-image: url(img/bh4.jpg);
+}
+#section .con3 .bottom>ul>li:nth-child(4):hover{
+    background-image: url(img/bh5.jpg);
+}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡFixedㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+#section .fixed{
+    width: 1200px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+#section .fixed .box{
+    float: right;
+    width: 0px; height: 600px;
+    background-color: white;
+    position: relative;
+    position: absolute;
+    right: 0; top: -600px;
+}
+#section .fixed .box::after{
+    width: 2px; height: 25px;
+    background-color: #333333;
+    position: absolute;
+    top: 50px; left: 243px;
+}
+#section .fixed .box>ul{
+    font-family: 'Pretendard500';
+    font-size: 30px;
+    margin-left: 60px;
+    margin-top: 45px;
+}
+#section .fixed .box .line{
+    margin-left: 50px;
+    width: 1100px; height: 3px;
+    background-color:  #F4CA44;
+}
+#section .fixed .box p:nth-child(2){
+    margin-top: 100px;
+}
+#section .fixed .box p:nth-child(3){
+    margin-top: 400px;
+}
+#section .fixed .tap ul>li{
+    text-align: center;
+    float: left;
+    width: 300px; height: 300px;
+    background-size: cover;
+    line-height: 650px;
+    margin-top: 50px;
+    font-size: 25px;
+    float: left;
+    margin-right: 10px;
+}
+#section .fixed .tap>li{
+    position:absolute;
+}
+#section .fixed .box .tap_1 li:nth-child(1){
+    background-image: url(img/fix_1.png);
+}
+
+#section .fixed .box .tap_1 li:nth-child(2){
+    background-image: url(img/fix_2.png);
+}
+#section .fixed .box .tap_2 li:nth-child(1){
+    background-image: url(img/f1.webp);
+}
+
+#section .fixed .box .tap_2 li:nth-child(2){
+    background-image: url(img/f2.webp);
+}
+#section .fixed .box .tap_2 ul{
+    position: absolute;
+    top: 50px; left: 0;
+    width: 1000px;
+}
+#section .fixed .box .tap_2 a{
+    display: block;
+    position: absolute;
+    left: 200px; top: 0px;
+}
+#section .fixed .fix{
+    font-family: 'Pretendard700';
+    float: right;
+    text-align: center;
+    text-indent: -150px;
+    color: #fff;
+    width: 283px; height: 148px;
+    background-image: url(img/fixed_03.png);
+    background-repeat: no-repeat;
+    /* box-shadow:0 1px 10px rgba(0, 0, 0, 0.05); */
+    position: absolute;
+    bottom: 0px; right: 0px;
+    z-index: 999;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#section .fixed .fix p:nth-child(1){
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+#section .fixed .fix::after{
+    width: 40px; height: 40px;
+    background-size: cover;
+    background-image: url(img/plus.png);
+    margin-left: 47px;
+    margin-top: 10px;
+}
+#section .time{
+    position: absolute;
+    margin-left: 0px;
+    font-family: 'Pretendard500';
+    font-size: 30px;
+    bottom: 20px; left: 50px;
+}
+#section .time span{
+    font-family: "EsaManru500";
+}
+#section .fixed .tap>li a {
+    display: block;
+    width: 200px; height: 30px;
+}
+#section .fixed .tap .select{
+    color: #F4CA44;
+}
+#section .tap ul{
+    display: none;
+}
+#section .fixed .tap .on{
+    display: block;
+}
+#section .fixed .close{
+    font-family: "EsaManru500";
+    cursor:url(img/yell_block.png)-10 -20,auto;
+    width: 30px; height: 30px;
+    font-size: 30px;
+    position: absolute;
+    top: 20px; right: 20px;
+    display: none;
+}
+
+
+/*footer*/
+
+
+#footer{
+    width: 100%;
+    margin-top: 1500px;
+    background-color: #262626;
+    position:absolute;
+    /* position: relative; */
+    top:2400px;
+    z-index: 99999;
+}
+#footer .linsafj{
+    width: 100%;
+    height: 300px;
+    color: rgb(123,123,123);
+    font-family: 'Pretendard300';
+    border-bottom: 1px solid white;
+}
+#footer .linsafj .fotterTop{
+    width: 80%;
+    margin: 0px auto ;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+#footer .linsafj .fotterTop>li{
+    font-size: 20px;
+    font-family: 'Pretendard500';
+    color: #bdbbbb;
+}
+#footer .linsafj .fotterTop>li>ul{
+    margin-top: 20px;
+}
+#footer .linsafj .fotterTop>li>ul>li{
+    font-size: 15px;
+    color: rgb(123,123,123);
+    line-height: 30px;
+    cursor:url(img/yell_block.png)-10 -20,auto;
+}
+#footer .linsafj .fotterTop>li .sns>li{
+    display: inline-block;
+    margin-right: 5px;
+}
+#footer .linsafj .fotterTop>li>ul>li.expend {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(123, 123, 123);
+    color: #bdbbbb;
+    position: relative;
+    z-index: 10;
+}
+#footer .linsafj .fotterTop>li>ul>li.expend>span {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+#footer .fotterTop>li>ul.country>li>ul.another {
+    font-size: 15px;
+    color: rgb(123, 123, 123);
+    background-color: #bdbbbb;
+    line-height: 40px;
+    position:absolute;
+    top:45px; left: 0;
+    width: 250px;
+    z-index: -10;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    height: 140px;
+    overflow-y: hidden;
+}
+#footer .fotterTop>li>ul.country>li>ul.another::-webkit-scrollbar{
+    width:10px;
+}
+#footer .fotterTop>li>ul.country>li>ul.another::-webkit-scrollbar-thumb{ /*막대*/
+    background-color: rgb(123, 123, 123);
+    border-radius: 50px;
+}
+#footer .fotterTop>li>ul.country>li>ul.another:hover{
+    overflow-y: scroll;
+    text-indent: 10px;
+}
+#footer .fotterTop>li>ul.country>li>ul.another>li:hover{
+    background-color: #555;
+}
+#footer .fotterBtm{
+    width: 1250px;
+    margin: 30px auto 0;
+    padding-bottom: 20px;
+}
+#footer .fotterBtm .fotterlogo{
+    width: 250px;
+    height: 80px;
+    float: left;
+    text-indent: -329857928357329px;
+    background-image: url(img/footerlogo_03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left:8%;
+}
+#footer .fotterBtm p{
+    font-family: 'Pretendard300';
+    font-size: 13px;
+    color: rgb(191,191,191);
+    margin-top: 5px;
+}
+#footer .fotterBtm p.add{
+margin-left: 30px;
+}
+#footer .fotterBtm p.num{
+margin-left: 30px;
+margin-bottom: 10px;
+}
+#footer .fotterBtm p.byebye{
+font-size: 13px;
+color: rgb(105,105,105);
+}
+
+
+
+
+.material-symbols-outlined{
+    animation-duration: 1s;
+    animation-name: footer ;
+    animation-iteration-count: infinite;
+}
+
+@keyframes footer {
+    0% {
+    transform:scale(1.0);
+
+    }
+    50% {
+    transform: scale(1.3);
+    color: rgb(85, 85, 85);
+    }
+    100% {
+    transform: scale(1.0);
+    }
+}
+
+
+#section .top_tit .tit_img{
+    animation-duration: 3s;
+    animation-name: object ;
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes object {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.05);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
